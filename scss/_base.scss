@@ -1,0 +1,42 @@
+$color-primary: black;
+$color-secondary: rgb(255, 255, 255);
+$color-background: #E1E4F0;
+$color-border: rgb(30, 210, 255);
+$color-button:  rgba(255, 255, 255, 0.709);
+$color-highlights: rgb(255, 54, 118);
+$color-highlights-icons: rgb(108, 204, 255);
+$color-post-background:  rgb(184, 211, 244);
+$color-post-arrow: rgb(140, 183, 235);
+$color-post-arrow-hover: rgb(80, 139, 211);
+$color-link-hover: rgb(2, 54, 103);
+$color-footer-background:  rgb(42, 44, 46);
+$color-footer-text: rgb(134, 134, 137);
+$color-footer-text-hover: rgb(211, 211, 211);
+
+$gradient-membership: linear-gradient(to right, rgb(72, 12, 49),rgba(140,22,57,1),rgb(125, 186, 232));
+$gradient-sheer: linear-gradient(to right, rgba(145, 59, 174, 0), rgba(255, 255, 255, 0.228) 50%, rgba(150, 34, 189, 0));
+
+$font-marker: 'Permanent Marker', cursive, Arial, Helvetica, sans-serif;
+$font-family-primary: Times, Arial, sans-serif;
+$font-family-secondary: 'Roboto', cursive, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: $color-background;
+    font-family: $font-family-primary;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+       color: $color-link-hover;
+    }
+    &:link {
+        color: $color-primary;
+    }
+}

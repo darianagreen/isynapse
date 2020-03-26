@@ -1,0 +1,69 @@
+@mixin animation-pressed {
+    animation: shadow-burst 0.7s forwards, pressed 0.7s forwards;
+}
+
+@mixin animation-grow {
+    animation: shadow-burst 0.7s forwards, grow 0.2s ease-in forwards;
+    cursor: pointer;
+}
+
+@mixin animation-pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@mixin animation-sheer {
+    animation: sheer 1.7s forwards;
+}
+
+@keyframes shadow-burst {
+    0% {
+        box-shadow: 0px 0px 10px 12px rgba(3, 209, 255, 0.3);
+    }
+
+    90% {
+        box-shadow: 0px 0px 2px 19px rgba(49, 255, 128, 0);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px 0px rgba(250, 0, 221, 0)
+    }
+}
+
+@keyframes pressed {
+     30% {
+         transform: scale(0.95);
+     }
+     100% {
+         transform: scale(0.95);
+     }
+}
+
+@keyframes grow {
+    90% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1.06);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.4);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes sheer {
+    0% {
+        transform: rotate(-40deg) scale(2, 2) translate(-100%, 0%);
+    }
+    100% {
+        transform: rotate(-40deg) scale(2, 2) translate(100%, 0%);
+    }
+}

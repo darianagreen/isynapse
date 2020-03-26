@@ -1,0 +1,14 @@
+.post-pack-1{
+    grid-area: post-pack-1;
+    @include post;
+}
+
+.post-pack-2{
+    grid-area: post-pack-2;
+    @include post;
+}
+
+.post-pack-3{
+    grid-area: post-pack-3;
+    @include post;
+}

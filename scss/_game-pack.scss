@@ -1,0 +1,33 @@
+.game-pack-1 {
+    grid-area: game-pack-1;
+    background-image: url(../images/space-pack3.jpg);
+    @include game-pack;
+
+    &::before {
+        @include cover(#4f8391c8);
+    }
+    &:hover {
+        @include animation-grow;
+        i {
+            color: $color-highlights-icons;
+        }
+    }
+    }
+
+.game-pack-2 {
+    grid-area: game-pack-2;
+    background-image: url(../images/sports-pack.jpg);
+    @extend .game-pack-1;
+    background-position: 20% 20%;
+    &::before {
+        @include cover(#425572ee);
+    }
+}
+.game-pack-3 {
+    grid-area: game-pack-3;
+    background-image: url(../images/adventure-pack.jpg);
+    @extend .game-pack-1;
+    &::before {
+        @include cover(#5f4d67c9);
+    }
+}

@@ -1,0 +1,36 @@
+@mixin area ($width: 100%, $height: 100%){
+    width: $width;
+    height: $height;
+}
+
+@mixin text-decor ($color: $color-secondary, $font-size: 3.4vw, $font-weight: 800) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    text-align: center;
+}
+
+@mixin cover ($color) {
+    content: '';
+    position: absolute;
+    @include area;
+    opacity: 0.8;
+    background-color: $color;
+    z-index: -1;
+}
+
+@mixin membership-cover {
+    content: '';
+    position: absolute;
+    @include area;
+    border-radius: 20%;
+    background: $gradient-sheer;
+    transform: translate(-100%, 0%);
+}
+
+@mixin marker-text {
+    @include text-decor($color-highlights, 2.7vw, 800);
+    font-family: $font-marker;
+    letter-spacing: 0.2vw;
+    transform: scaleY(1.3);
+}

@@ -1,0 +1,10 @@
+footer {
+    grid-area: footer;
+    @include footer;
+}
+
+.copyright {
+    padding: 1vw 0;
+    text-align: center;
+    @include text-decor($color-primary, 1vw, 400);
+}

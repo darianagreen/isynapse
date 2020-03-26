@@ -1,0 +1,67 @@
+.membership {
+    grid-area: membership;
+    background: $gradient-membership;
+    margin-top: 10vw;
+    display: grid;
+    grid-template-rows: repeat(4, auto-fill);
+    grid-template-columns: 3% 20% 20% 1fr;
+    column-gap: 4vw;
+    
+   &::after {
+       @include membership-cover;
+   }
+
+   &:hover::after {
+       @include animation-sheer;
+   }
+
+    &--box {
+        @include membership-box;
+    }
+
+    &_1 {
+        grid-row: 1/2;
+        grid-column: 1/4;
+        text-align: right;
+        align-self: center;
+        padding: 2vw 0;
+        @include marker-text;
+    }
+
+    &_2 {
+        grid-row: 1/5;
+        grid-column: 4/5;
+        align-self: center;
+        overflow: hidden;
+        img {
+            @include area(110%, 110%);
+        }
+    }
+    &_3 {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    &_4 {
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+    &_5 {
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+
+    &_6 {
+        grid-row: 2/3;
+        grid-column: 3/4;         
+    }
+    &_7 {
+        grid-row: 3/4;
+        grid-column: 3/4;
+       
+    }
+    &_8 {
+        grid-row: 4/5;
+        grid-column: 3/4;
+    }
+}

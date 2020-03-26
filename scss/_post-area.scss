@@ -1,0 +1,5 @@
+.post-area{
+    grid-area: post-area;
+    @include text-decor($color-primary);
+    align-self: center;
+}

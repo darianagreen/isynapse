@@ -1,0 +1,129 @@
+@mixin button {
+    @include text-decor($color-primary, 1.1vw, 700);
+    width: 19vw;
+    height: 5vw;
+    border-radius: 2rem;
+    border: solid 2px $color-border;
+    background-color: $color-button;
+   
+    &:hover {
+        @include animation-pressed;
+    }
+}
+
+@mixin game-pack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: $color-secondary;
+    position: relative;
+    z-index: 1;
+
+    i {
+        @include text-decor(3.7vw);
+        margin: 0 2vw 1vw;
+    }
+
+    h3 {
+        @include text-decor;
+        margin: 2vw 6vw;
+    }
+
+    ul {
+        @include text-decor(1.7vw, 400);
+        line-height: 2.5vw;
+        list-style: none;
+    }
+}
+
+@mixin membership-box ($i-color: $color-highlights, $text-color: $color-secondary) {
+    
+
+    i {
+        margin-left: 5vw;
+        @include text-decor($i-color, 3vw, 800);
+    }
+
+    p {
+        @include text-decor($text-color, 1.8vw, 800);
+        padding-top: 2vw;
+        text-align: left;
+    }
+
+    article {
+        @include text-decor($text-color, 1.3vw, 400);
+        padding-top: 2vw;
+        text-align: left;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+     i{
+        @include animation-pulse;
+    }
+}
+}
+
+@mixin post {
+    background-color: $color-post-background;
+    @include text-decor;
+
+  img {
+      @include area(100%, 37%);
+  }
+ p {
+     @include area(100%, 47%);
+     padding-top: 2vw;
+
+     &::after {
+         content: '\f105';
+         font-family: FontAwesome;
+         @include text-decor($color-post-arrow, 3.5vw, 900);
+         margin-left: 1vw;
+         position: absolute;
+     }
+     &:hover::after {
+         color: $color-post-arrow-hover;
+         transform: scale(1.2);
+     }
+ }
+
+    &_info {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1vw 0 1vw;
+        @include text-decor($color-primary, 1.4vw, 800);
+        text-transform: uppercase;
+ }
+    &::before {
+        content: '\f004';
+        font-family: FontAwesome;
+        @include text-decor($color-secondary, 1.6vw, 400);
+        position: absolute;
+        margin: 1vw 0 0 22vw;
+    }
+
+&:hover::before {
+    transform: scale(1.2);
+}
+}
+
+@mixin footer {
+    color: $color-footer-text;
+    background-color: $color-footer-background;
+    font-size: 1.7vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 3vw 0 2vw 0;
+    align-items: center;
+    margin-top: 10vw;
+
+    div:hover {
+        color: $color-footer-text-hover;
+        cursor: pointer;
+    }
+}

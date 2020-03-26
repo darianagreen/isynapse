@@ -1,0 +1,13 @@
+.promo-text {
+    grid-area: promo-text;
+    padding-top: 3vw;
+
+    &_1 {
+        @include text-decor ($color-primary);
+        padding: 4vw 0;
+    }
+
+    &_2 {
+        @include text-decor($color-primary, 1.7vw, 400);
+    }
+}
